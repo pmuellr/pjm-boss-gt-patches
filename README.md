@@ -1,4 +1,4 @@
-pjm-boss-gt-patches - Max for Live device for the Boss GT-001 patch selection
+pjm-boss-gt-patches - Max for Live device for patch selection of the Boss GT-001
 --------------------------------------------------------------------------------
 
 ![pjm-boss-gt-patches device](images/pjm-boss-gt-patches.png)
