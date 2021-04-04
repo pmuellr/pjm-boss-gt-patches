@@ -63,6 +63,11 @@ references
 changelog
 ================================================================================
 
-version 2021-04-03
+version 2021.4.4
+
+- the saved bank and patch now resent when Live Set is loaded
+- re-orged the patches, added comments
+
+version 2021-04-03 (aka 2021.4.3)
 
 - initial version
