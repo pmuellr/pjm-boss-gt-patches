@@ -30,6 +30,22 @@ What this device is best for is browsing the patches live. Map the **prev** and
 preview them with a foot press.
 
 
+effects
+================================================================================
+
+There are additional M4L devices for the individual effects.  So far:
+
+- `pjm-boss-gt-fx-comp.amxd` - comp
+
+The way these effects work is that they just blast the settings into the device.
+There is no way to get the "current" version of the settings.  So when you
+have one of these devices in use, they will always overwrite the patch setting,
+and there's no way to undo that.  Annoying, but no easy way to work around that
+for now.  Even if there was, that leaves us in a multi-state situation - when
+switching patches, should it blast over every time?  Should it change to the
+patch version?  Somehow show you both, letting you pick between them?
+
+
 usage
 ================================================================================
 
@@ -62,6 +78,15 @@ references
 
 changelog
 ================================================================================
+
+version 2021.4.8
+
+- added first effect - comp; not working quite right ...
+
+version 2021.4.7
+
+- send the global message `pjm-boss-gt-patches-patch-changed` when a patch
+  has changed; for future plugins that would want to know
 
 version 2021.4.4
 
