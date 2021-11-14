@@ -39,6 +39,7 @@ There are additional M4L devices for the individual effects.  So far:
 | -------------------------------- | ----------     |
 | `pjm-boss-gt-comp.amxd`          | comp           |
 | `pjm-boss-gt-fx-wave-synth.amxd` | FX: Wave Synth |
+| `pjm-boss-gt-fx-slow-gear.amxd`  | FX: Slow Gear  |
 
 The way these effects work is that they just blast the settings into the device.
 There is no way to get the "current" version of the settings. So when you have
