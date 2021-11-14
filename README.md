@@ -3,9 +3,9 @@ pjm-boss-gt-patches - Max for Live device for patch selection of the Boss GT-001
 
 ![pjm-boss-gt-patches device](images/pjm-boss-gt-patches.png)
 
-This is a Max for Live MIDI Effect device. It is used to set the current patch
-on a [Boss GT-001 device][]. It may work with other Boss GT devices, but I only
-have the 001.
+`pjm-boss-gt-patches.amxd` is a Max for Live MIDI Effect device. It is used to
+set the current patch on a [Boss GT-001 device][]. It may work with other Boss
+GT devices, but I only have the 001.
 
 [Boss GT-001 device]: https://www.boss.info/global/products/gt-001/
 
@@ -35,33 +35,37 @@ effects
 
 There are additional M4L devices for the individual effects.  So far:
 
-- `pjm-boss-gt-fx-comp.amxd` - comp
+| M4L device                       | description    |
+| -------------------------------- | ----------     |
+| `pjm-boss-gt-comp.amxd`          | comp           |
+| `pjm-boss-gt-fx-wave-synth.amxd` | FX: Wave Synth |
 
 The way these effects work is that they just blast the settings into the device.
-There is no way to get the "current" version of the settings.  So when you
-have one of these devices in use, they will always overwrite the patch setting,
-and there's no way to undo that.  Annoying, but no easy way to work around that
-for now.  Even if there was, that leaves us in a multi-state situation - when
-switching patches, should it blast over every time?  Should it change to the
-patch version?  Somehow show you both, letting you pick between them?
+There is no way to get the "current" version of the settings. So when you have
+one of these devices in use, they will always overwrite the patch setting, and
+there's no way to undo that. Also, when the patch is changed via the `pjm-boss-gt-patches` device, all the effects devices will overwrite their
+settings, replacing what was in the patch.  Anoying, or awesome?  You can
+disable the M4L device to have it stop doing that :-)
 
+For the FX devices, keep in mind you can only have one device assigned to FX1
+FX2 simultaneously.  It can be the same device (fun!).  If more than one M4L
+device has FX1 (or FX2) set, which one will be used is indeterminate.
 
 usage
 ================================================================================
 
-Since this is a Max for Lie MIDI Effect device, it needs to be added to a MIDI
+Since this is a Max for Live MIDI Effect device, it needs to be added to a MIDI
 track. That MIDI track will need to have it's output set to go to the GT-001
 MIDI port. I suggest creating a new track GT-001 with this device in it, and a
 MIDI Monitor device before and after it, disabled, but ready to help out for
 debugging if needed.
 
-You can also set the input MIDI port to the same GT-001 MIDI port, in which case
-any changes you make to the GT-001 on the device itself, or via a pedal attached
-to that device, will be reflected back in this UI, and then saved. You would
-want to do this if you have a pedal connected to the GT-001 that already
-switches through the patches, and then have those changes saved in the Live Set.
-
-I haven't played with somehow using this in an automated way.  Perhaps possible?
+For patch switching with `pjm-boss-gt-patches`, you can also set the input MIDI
+port to the same GT-001 MIDI port, in which case any changes you make to the
+GT-001 on the device itself, or via a pedal attached to that device, will be
+reflected back in this UI, and then saved. You would want to do this if you have
+a pedal connected to the GT-001 that already switches through the patches, and
+then have those changes saved in the Live Set.
 
 
 references
@@ -78,6 +82,16 @@ references
 
 changelog
 ================================================================================
+
+version 2021.11.14
+
+- general updates
+- `comp` device seems to be working
+- `fx-wave-synth` seems to be working
+
+version 2021.4.8
+
+- added first effect - comp; not working quite right ...
 
 version 2021.4.8
 
