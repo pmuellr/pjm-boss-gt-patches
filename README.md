@@ -40,6 +40,8 @@ There are additional M4L devices for the individual effects.  So far:
 | `pjm-boss-gt-comp.amxd`          | comp           |
 | `pjm-boss-gt-fx-wave-synth.amxd` | FX: Wave Synth |
 | `pjm-boss-gt-fx-slow-gear.amxd`  | FX: Slow Gear  |
+| `pjm-boss-gt-fx-slicer.amxd`     | FX: Slicer     |
+| `pjm-boss-gt-fx-t-wah.amxd`      | FX: T Wah      |
 
 The way these effects work is that they just blast the settings into the device.
 There is no way to get the "current" version of the settings. So when you have
@@ -84,11 +86,17 @@ references
 changelog
 ================================================================================
 
+version 2021.11.15
+
+- added `fx-slicer`
+- added `fx-t-wah`
+
 version 2021.11.14
 
 - general updates
 - `comp` device seems to be working
 - `fx-wave-synth` seems to be working
+- added `fx-slow-gear`
 
 version 2021.4.8
 
